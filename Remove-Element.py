@@ -4,10 +4,11 @@
 4#Output: return the remaining length of the list after removing the value
 5class Solution:
 6    def removeElement(self, nums: List[int], val: int) -> int:
-7        i = 0
-8        while i < len(nums):
-9            if nums[i] == val:
-10                del nums[i]
-11            else:
-12                i+=1
+7        write = 0
+8        for read in range(len(nums)):
+9            if nums[read] != val:
+10                nums[write] = nums[read]
+11                write += 1
+12        return write
 13
+14
